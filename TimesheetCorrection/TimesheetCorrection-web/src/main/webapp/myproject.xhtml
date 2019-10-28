@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+	   xmlns:h="http://xmlns.jcp.org/jsf/html"
+	   xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	   xmlns:jsf="http://xmlns.jcp.org/jsf"
+	   xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	   xmlns:b="http://bootsfaces.net/ui"
+	   xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+    <meta charset="utf-8" />
+        <title>Mes Projets</title>
+        <h:outputStylesheet library="default" name="css/form.css"  />
+     </h:head>
+     
+     <h:body>
+      <h:outputText value="Mes Projets" />
+
+<p:dataTable var="car" value="#{groupUserBean.getProjectsbyuser(2)}">
+    <p:column headerText="Nom Du Groupe">
+        <h:outputText value="#{car.groupproject.nom}" />
+    </p:column>
+ 
+    <p:column headerText="Nom Du Projet">
+        <h:outputText value="#{car.nomProject}" />
+    </p:column>
+    <p:column headerText="Description Du Projet">
+        <h:outputText value="#{car.description}" />
+    </p:column>
+    <p:column headerText="date Debut Du Projet">
+        <h:outputText value="#{car.dateDeb}" />
+    </p:column>
+    <p:column headerText="Date Fin Du Projet">
+        <h:outputText value="#{car.dateFin}" />
+    </p:column>
+    
+    
+ </p:dataTable>
+
+	</h:body>
+</html>

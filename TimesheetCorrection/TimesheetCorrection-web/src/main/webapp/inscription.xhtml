@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+	   xmlns:h="http://xmlns.jcp.org/jsf/html"
+	   xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	   xmlns:jsf="http://xmlns.jcp.org/jsf"
+	   xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	   xmlns:b="http://bootsfaces.net/ui"
+	   xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+        <meta charset="utf-8" />
+        <title>Inscription</title>
+        <h:outputStylesheet library="default" name="css/form.css"  />
+    </h:head>
+    <h:body>
+      <h:form>
+         <p:fieldset legend="Inscrivez-vous" style="margin-bottom:20px">
+         	
+	     	
+	        
+	        
+	        <h3>Login :</h3>
+	<span class="ui-float-label">
+       <p:inputText id="float-input" value="#{userBean.login}" />
+       <p:outputLabel for="@previous"  />
+   </span>
+         <br />
+	        
+	        <h3>Mot De Passe :</h3>
+	<span class="ui-float-label">
+	        
+	       
+       	 	<p:password id="motdepasse" value="#{userBean.mdp}" feedback="true" />
+       	 	
+       	 	</span>
+	<br />
+	        
+	
+			<h3>Nom d'utilisateur :</h3>
+	<span class="ui-float-label">
+       <p:inputText id="float-input2" value="#{userBean.nom}" />
+       <p:outputLabel for="@previous"  />
+   </span>
+         <br />
+	        <h3>Prenom d'utilisateur :</h3>
+	<span class="ui-float-label">
+       <p:inputText id="float-input3" value="#{userBean.prenom}" />
+       <p:outputLabel for="@previous"  />
+   </span>
+         <br />
+	        
+	        
+	        
+	        
+	        
+	        <h:messages globalOnly="true" infoClass="info" />
+	<br />
+	<br />
+	<br />
+			<p:commandButton value="Inscription"   action="#{userBean.ajouteruser()}" style="margin-right:20px;" styleClass="ui-priority-primary" />	
+	       
+	        
+	        <br />
+          </p:fieldset>
+        </h:form> 	
+    </h:body>
+</html>
+	
+			
+	       

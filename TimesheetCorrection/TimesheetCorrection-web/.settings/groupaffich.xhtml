@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+    <meta charset="utf-8" />
+        <title>Mes Taches</title>
+        <h:outputStylesheet library="default" name="css/form.css"  />
+     </h:head>
+     
+     <h:body>
+      <h:outputText value="Mes Taches" />
+
+<p:dataTable var="car" value="#{userBean.allUsers}">
+    <p:column headerText="login">
+        <h:outputText value="#{car.login}" />
+    </p:column>
+ 
+    <p:column headerText="Team">
+        <h:outputText value="#{car.groupuser.nom}" />
+    </p:column>
+    <p:column headerText="Team">
+        <h:outputText value="#" />
+    </p:column>
+    
+ 
+ <p:column>
+ <h:form id="form" >
+        <p:commandButton value="tt"  action="#" icon="pi pi-check" />
+        
+        </h:form>
+    </p:column>
+   <!--  <p:column headerText="Team">
+        <h:outputText value="#{projectBean.getAllProjectgroup(car.groupproject.id)}" />
+    </p:column>
+     -->
+ 
+
+
+</p:dataTable>
+	</h:body>
+</html>

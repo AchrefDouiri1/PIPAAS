@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+	   xmlns:h="http://xmlns.jcp.org/jsf/html"
+	   xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	   xmlns:jsf="http://xmlns.jcp.org/jsf"
+	   xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	   xmlns:b="http://bootsfaces.net/ui"
+	   xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+    <meta charset="utf-8" />
+        <title>Mes Taches</title>
+        <h:outputStylesheet library="default" name="css/form.css"  />
+     </h:head>
+     
+     <h:body>
+      <h:outputText value="Mes Taches" />
+
+<p:dataTable var="car" value="#{tacheBean.tachePlans}">
+    <p:column headerText="Tache">
+        <h:outputText value="#{car.nom}" />
+    </p:column>
+ 
+    <p:column headerText="Projet">
+        <h:outputText value="#{car.project.nomProject}" />
+    </p:column>
+ 
+</p:dataTable>
+
+	</h:body>
+</html>

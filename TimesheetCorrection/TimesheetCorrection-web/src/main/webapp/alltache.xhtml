@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+	   xmlns:h="http://xmlns.jcp.org/jsf/html"
+	   xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	   xmlns:jsf="http://xmlns.jcp.org/jsf"
+	   xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	   xmlns:b="http://bootsfaces.net/ui"
+	   xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+    <meta charset="utf-8" />
+        <title>Taches</title>
+        <h:outputStylesheet library="default" name="css/form.css"  />
+     </h:head>
+     
+     <h:body>
+      <h:outputText value="Taches" />
+
+<p:dataTable var="car" value="#{tacheBean.allTaches}">
+    <p:column headerText="Nom Tache">
+        <h:outputText value="#{car.nom}" />
+    </p:column>
+ 
+    <p:column headerText="Date Debut Tache">
+        <h:outputText value="#{car.dateDeb}" />
+    </p:column>
+    <p:column headerText="Date Fin Tache">
+        <h:outputText value="#{car.dateFin}" />
+    </p:column>
+    <p:column headerText="Etat Tache">
+        <h:outputText value="#{car.etat}" />
+    </p:column>
+    <p:column headerText="Nom Projet">
+        <h:outputText value="#{car.project.nomProject}" />
+    </p:column>
+    <p:column headerText="Description Projet">
+        <h:outputText value="#{car.project.description}" />
+    </p:column>
+    <p:column headerText="Date Debut Projet">
+        <h:outputText value="#{car.project.dateDeb}" />
+    </p:column>
+    <p:column headerText="Date Fin Projet">
+        <h:outputText value="#{car.project.dateFin}" />
+    </p:column>
+    <p:column headerText="Nom Du Group">
+        <h:outputText value="#{car.project.groupproject.nom}" />
+    </p:column>
+    
+ 
+ 
+   <!--  <p:column headerText="Team">
+        <h:outputText value="#{projectBean.getAllProjectgroup(car.groupproject.id)}" />
+    </p:column>
+     -->
+ 
+
+
+</p:dataTable>
+	</h:body>
+</html>

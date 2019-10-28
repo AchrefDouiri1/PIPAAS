@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+	   xmlns:h="http://xmlns.jcp.org/jsf/html"
+	   xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	   xmlns:jsf="http://xmlns.jcp.org/jsf"
+	   xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	   xmlns:b="http://bootsfaces.net/ui"
+	   xmlns:p="http://primefaces.org/ui">
+
+	
+	
+	<h:body>
+	<h:form  id="form2">
+	
+		
+
+	<br/>
+
+		<h:selectOneMenu value="#{tacheBean.idTache}" >
+			<f:selectItems value="#{tacheBean.allTaches}" 
+				var="tache" itemValue="#{tache.id}" 
+				itemLabel="#{tache.id}" />
+		</h:selectOneMenu>
+		
+		<h:selectOneMenu value="#{tacheBean.projectId}" >
+			<f:selectItems value="#{projectBean.allProjects}" 
+				var="project" itemValue="#{project.id}" 
+				itemLabel="#{project.id}" />
+		</h:selectOneMenu>
+		
+		<h:selectOneMenu value="#{tacheBean.userId}" >
+			<f:selectItems value="#{userBean.allUsers}" 
+				var="user" itemValue="#{user.id}" 
+				itemLabel="#{user.id}" />
+		</h:selectOneMenu>
+		
+		<h:commandButton id="btn" action="#{tacheBean.affDevice()}" value="Affecter" />
+		
+	<br/>
+	
+		</h:form>
+	
+	
+	 </h:body>
+</html>
